@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <Extern href="stdidcmd.h"/>
+    <Extern href="vsshlids.h"/>
+
+    <Commands package="guidDocumentStatePackage">
+        <Groups>
+            <Group guid="guidDocumentStatePackageCmdSet" id="MyMenuGroup" priority="0x0600">
+                <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+            </Group>
+        </Groups>
+
+        <Buttons>
+            <Button guid="guidDocumentStatePackageCmdSet" id="SaveStateId" priority="0x0100" type="Button">
+                <Parent guid="guidDocumentStatePackageCmdSet" id="MyMenuGroup" />
+                <Icon guid="guidImages" id="bmpPic1" />
+                <Strings>
+                    <ButtonText>Save Documents Workspace</ButtonText>
+                </Strings>
+            </Button>
+
+            <Button guid="guidDocumentStatePackageCmdSet" id="LoadStateId" priority="0x0101" type="Button">
+                <Parent guid="guidDocumentStatePackageCmdSet" id="MyMenuGroup" />
+                <Icon guid="guidImages" id="bmpPic1" />
+                <Strings>
+                    <ButtonText>Load Documents Workspace</ButtonText>
+                </Strings>
+            </Button>
+
+            <Button guid="guidDocumentStatePackageCmdSet" id="CopyContentsId" priority="0x0102" type="Button">
+                <Parent guid="guidDocumentStatePackageCmdSet" id="MyMenuGroup" />
+                <Icon guid="guidImages" id="bmpPic1" />
+                <Strings>
+                    <ButtonText>Copy All Documents Contents</ButtonText>
+                </Strings>
+            </Button>
+        </Buttons>
+
+        <Bitmaps>
+            <Bitmap guid="guidImages" href="Resources\Command1.png" usedList="bmpPic1"/>
+        </Bitmaps>
+    </Commands>
+
+    <Symbols>
+        <GuidSymbol name="guidDocumentStatePackage" value="{11111111-2222-3333-4444-555555555555}" />
+
+        <GuidSymbol name="guidDocumentStatePackageCmdSet" value="{11111111-2222-3333-4444-555555555555}">
+            <IDSymbol name="MyMenuGroup" value="0x1020" />
+            <IDSymbol name="SaveStateId" value="0x0100" />
+            <IDSymbol name="LoadStateId" value="0x0101" />
+            <IDSymbol name="CopyContentsId" value="0x0102" />
+        </GuidSymbol>
+
+        <GuidSymbol name="guidImages" value="{33333333-4444-5555-6666-777777777777}">
+            <IDSymbol name="bmpPic1" value="1" />
+        </GuidSymbol>
+    </Symbols>
+</CommandTable>
